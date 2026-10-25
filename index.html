@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Артём Коваль — Лазерное удаление тату и татуажа в Таллине</title>
+<meta name="description" content="Профессиональное лазерное удаление тату, татуажа и перманентного макияжа. Мастер Артём Коваль, Таллин. Без шрамов, с гарантией результата.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>✨</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="hdr-top">
+    <div class="wrap" style="display:flex;align-items:center;gap:24px;width:100%;max-width:1422px;padding:0 15px">
+      <span class="hdr-slogan">Лазерное удаление тату · Таллин</span>
+      <div class="spacer"></div>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--icon)" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <span>Tartu mnt. 136, Tallinn</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--icon)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span>Пн–Сб: 10:00–20:00</span>
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="switchLang('ru')">RU</button>
+        <button class="lang-btn" onclick="switchLang('en')">EN</button>
+      </div>
+    </div>
+  </div>
+  <div class="hdr-main">
+    <button class="burger" id="burgerBtn" aria-label="Меню">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div>
+        <div class="logo-text" data-ru="Артём Коваль" data-en="Artem Koval">Артём Коваль</div>
+        <span class="logo-sub" data-ru="Лазерное удаление" data-en="Laser Removal">Лазерное удаление</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#master" class="nav-link" data-ru="О мастере" data-en="About">О мастере</a>
+      <a href="#services" class="nav-link" data-ru="Услуги" data-en="Services">Услуги</a>
+      <a href="#how" class="nav-link" data-ru="Как это работает" data-en="How it works">Как это работает</a>
+      <a href="#equipment" class="nav-link" data-ru="Оборудование" data-en="Equipment">Оборудование</a>
+      <a href="#reviews" class="nav-link" data-ru="Отзывы" data-en="Reviews">Отзывы</a>
+      <a href="#pricing" class="nav-link" data-ru="Цены" data-en="Pricing">Цены</a>
+    </nav>
+    <div class="hdr-btns">
+      <a href="#booking"><button class="btn-blue" data-ru="Записаться" data-en="Book Now">Записаться</button></a>
+    </div>
+    <a href="tel:+37200000000" class="phone-ico">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mnav-overlay" id="mnavOverlay"></div>
+<nav class="mnav" id="mnavPanel">
+  <button class="mnav-close" id="mnavClose">✕</button>
+  <ul>
+    <li><a href="#master" class="mnav-link" data-ru="О мастере" data-en="About">О мастере</a></li>
+    <li><a href="#services" class="mnav-link" data-ru="Услуги" data-en="Services">Услуги</a></li>
+    <li><a href="#how" class="mnav-link" data-ru="Как это работает" data-en="How it works">Как это работает</a></li>
+    <li><a href="#equipment" class="mnav-link" data-ru="Оборудование" data-en="Equipment">Оборудование</a></li>
+    <li><a href="#reviews" class="mnav-link" data-ru="Отзывы" data-en="Reviews">Отзывы</a></li>
+    <li><a href="#pricing" class="mnav-link" data-ru="Цены" data-en="Pricing">Цены</a></li>
+    <li><a href="#booking" class="mnav-link" data-ru="Записаться" data-en="Book Now">Записаться</a></li>
+  </ul>
+  <div class="lang-switcher" style="margin-top:30px">
+    <button class="lang-btn active" onclick="switchLang('ru')">RU</button>
+    <button class="lang-btn" onclick="switchLang('en')">EN</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-slider" id="heroSlider">
+    <div class="slide active">
+      <img src="https://images.unsplash.com/photo-1713085085470-fba013d67e65?w=1600&fit=crop&crop=entropy&q=80&auto=format" alt="Лазерная процедура">
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=1600&fit=crop&crop=entropy&q=80&auto=format" alt="Косметологическая процедура">
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1647004692483-c5d942fe1137?w=1600&fit=crop&crop=entropy&q=80&auto=format" alt="Уход за кожей">
+    </div>
+    <div class="hs-cap">
+      <h1 data-ru="Верни коже чистоту — лазерное удаление тату и татуажа" data-en="Restore your skin — laser tattoo & makeup removal">Верни коже чистоту — лазерное удаление тату и татуажа</h1>
+      <p class="hs-sub" data-ru="Профессиональное удаление тату, татуажа и перманентного макияжа. Без шрамов — с гарантией результата." data-en="Professional removal of tattoos, permanent makeup and microblading. No scars — guaranteed results.">Профессиональное удаление тату, татуажа и перманентного макияжа. Без шрамов — с гарантией результата.</p>
+      <a href="#booking"><button class="btn-accent" data-ru="Записаться на консультацию" data-en="Book a Consultation">Записаться на консультацию</button></a>
+    </div>
+    <div class="slider-arrows">
+      <button class="sarrow" id="sprev" aria-label="Назад">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="sarrow" id="snext" aria-label="Вперёд">
+        <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+      </button>
+    </div>
+    <div class="sdots" id="sdots">
+      <button class="sdot active"></button>
+      <button class="sdot"></button>
+      <button class="sdot"></button>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="hero-cards">
+      <div class="hc-promo">
+        <span class="badge" style="width:fit-content;font-size:13px" data-ru="Акция" data-en="Special offer">Акция</span>
+        <h3 class="h3c" data-ru="Первая консультация бесплатно" data-en="First consultation free">Первая консультация бесплатно</h3>
+        <p style="font-size:14px;color:var(--muted)" data-ru="Оценим вашу ситуацию и подберём оптимальный план удаления без обязательств." data-en="We'll assess your case and recommend the best removal plan with no obligation.">Оценим вашу ситуацию и подберём оптимальный план удаления без обязательств.</p>
+        <a href="#booking"><button class="btn-blue" data-ru="Записаться" data-en="Book Now">Записаться</button></a>
+      </div>
+      <div class="hc-news">
+        <div class="mnews-item">
+          <img class="mnews-img" src="https://images.unsplash.com/photo-1597852075234-fd721ac361d3?w=120&fit=crop&q=80&auto=format" alt="Тату">
+          <div class="mnews-text" data-ru="Удаление тату любой сложности — от мелкого рисунка до sleeve" data-en="Removing tattoos of any complexity — from small designs to full sleeves">Удаление тату любой сложности — от мелкого рисунка до sleeve</div>
+          <div class="ico-round"><svg viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></div>
+        </div>
+        <div class="mnews-item">
+          <img class="mnews-img" src="https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=120&fit=crop&q=80&auto=format" alt="Татуаж">
+          <div class="mnews-text" data-ru="Коррекция и полное удаление перманентного макияжа и татуажа" data-en="Correction and full removal of permanent makeup and microblading">Коррекция и полное удаление перманентного макияжа и татуажа</div>
+          <div class="ico-round"><svg viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></div>
+        </div>
+      </div>
+      <div class="hc-form">
+        <h3 data-ru="Запишитесь прямо сейчас" data-en="Book your session now">Запишитесь прямо сейчас</h3>
+        <div class="hc-form-row">
+          <div class="field"><input type="text" placeholder="Ваше имя" data-ru-placeholder="Ваше имя" data-en-placeholder="Your name"></div>
+          <div class="field"><input type="tel" placeholder="+372 000 0000" ></div>
+          <button class="btn-form" onclick="submitQuickForm(this)" data-ru="Отправить" data-en="Send">Отправить</button>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="chk1" checked>
+          <label for="chk1" data-ru="Соглашаюсь на обработку персональных данных" data-en="I agree to the processing of personal data">Соглашаюсь на обработку персональных данных</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MASTER -->
+<section id="master" class="about sec">
+  <div class="wrap">
+    <div class="about sec-head">
+      <div class="sec-head-left">
+        <h2 class="h1 rv" data-ru="Мастер Артём Коваль" data-en="Master Artem Koval">Мастер Артём Коваль</h2>
+        <p class="lead rv" data-ru="Специалист по лазерному удалению тату и татуажа. Работаю с профессиональным оборудованием последнего поколения. Индивидуальный подход к каждому клиенту." data-en="Specialist in laser tattoo and permanent makeup removal. I work with the latest professional equipment and take an individual approach to each client.">Специалист по лазерному удалению тату и татуажа. Работаю с профессиональным оборудованием последнего поколения. Индивидуальный подход к каждому клиенту.</p>
+      </div>
+      <div>
+        <p style="font-size:14px;color:var(--muted);margin-bottom:10px" data-ru="Я в соцсетях" data-en="Follow me">Я в соцсетях</p>
+        <div class="soc-pill">
+          <a href="#"><svg viewBox="0 0 24 24" width="25" height="25"><path fill="var(--navy)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" width="25" height="25"><path fill="var(--navy)" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://t.me/artem_koval_laser"><svg viewBox="0 0 24 24" width="25" height="25"><path fill="var(--navy)" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="master-grid rv">
+      <div class="master-img">
+        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&fit=crop&crop=entropy&q=80&auto=format" alt="Мастер Артём Коваль">
+      </div>
+      <div class="master-info">
+        <div class="master-badge" data-ru="Сертифицированный специалист" data-en="Certified Specialist">Сертифицированный специалист</div>
+        <h3 class="h3" data-ru="Почему доверяют мне" data-en="Why clients trust me">Почему доверяют мне</h3>
+        <p style="color:var(--muted)" data-ru="Я работаю только с лицензированным лазерным оборудованием и прошёл профессиональную подготовку в области лазерных косметологических процедур. Каждый сеанс — это безопасность, точность и забота о вашей коже." data-en="I work exclusively with licensed laser equipment and have received professional training in laser cosmetic procedures. Every session is about safety, precision and care for your skin.">Я работаю только с лицензированным лазерным оборудованием и прошёл профессиональную подготовку в области лазерных косметологических процедур. Каждый сеанс — это безопасность, точность и забота о вашей коже.</p>
+        <div class="master-stats">
+          <div class="stat-item">
+            <div class="stat-num">500+</div>
+            <div class="stat-label" data-ru="процедур проведено" data-en="procedures done">процедур проведено</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">5+</div>
+            <div class="stat-label" data-ru="лет опыта" data-en="years of experience">лет опыта</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">98%</div>
+            <div class="stat-label" data-ru="довольных клиентов" data-en="satisfied clients">довольных клиентов</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">0</div>
+            <div class="stat-label" data-ru="шрамов после процедур" data-en="scars after procedures">шрамов после процедур</div>
+          </div>
+        </div>
+        <a href="#booking"><button class="btn-blue" data-ru="Записаться на консультацию" data-en="Book a Consultation">Записаться на консультацию</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services sec" style="background:var(--bg-alt)">
+  <div class="wrap">
+    <div class="services sec-head">
+      <div>
+        <h2 class="h1 rv" data-ru="Услуги" data-en="Services">Услуги <span class="badge">4</span></h2>
+      </div>
+      <a href="#booking"><button class="btn-out rv" data-ru="Записаться" data-en="Book Now">Записаться</button></a>
+    </div>
+    <div class="slider-wrap" id="svcSlider">
+      <div class="svc rv">
+        <div class="svc-img"><img src="https://images.unsplash.com/photo-1597852075234-fd721ac361d3?w=600&fit=crop&q=80&auto=format" alt="Удаление тату"></div>
+        <h3 data-ru="Удаление тату" data-en="Tattoo Removal">Удаление тату</h3>
+        <div class="svc-footer">
+          <span class="svc-price" data-ru="от 50 €" data-en="from €50">от 50 €</span>
+          <button class="go" onclick="location.href='#booking'"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></button>
+        </div>
+      </div>
+      <div class="svc rv">
+        <div class="svc-img"><img src="https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=600&fit=crop&q=80&auto=format" alt="Удаление татуажа"></div>
+        <h3 data-ru="Удаление татуажа" data-en="Microblading Removal">Удаление татуажа</h3>
+        <div class="svc-footer">
+          <span class="svc-price" data-ru="от 40 €" data-en="from €40">от 40 €</span>
+          <button class="go" onclick="location.href='#booking'"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></button>
+        </div>
+      </div>
+      <div class="svc rv">
+        <div class="svc-img"><img src="https://images.unsplash.com/photo-1713085085470-fba013d67e65?w=600&fit=crop&q=80&auto=format" alt="Перманентный макияж"></div>
+        <h3 data-ru="Удаление перм. макияжа" data-en="Permanent Makeup Removal">Удаление перм. макияжа</h3>
+        <div class="svc-footer">
+          <span class="svc-price" data-ru="от 45 €" data-en="from €45">от 45 €</span>
+          <button class="go" onclick="location.href='#booking'"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></button>
+        </div>
+      </div>
+      <div class="svc rv">
+        <div class="svc-img"><img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&fit=crop&q=80&auto=format" alt="Коррекция"></div>
+        <h3 data-ru="Коррекция и осветление" data-en="Correction & Lightening">Коррекция и осветление</h3>
+        <div class="svc-footer">
+          <span class="svc-price" data-ru="от 35 €" data-en="from €35">от 35 €</span>
+          <button class="go" onclick="location.href='#booking'"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="how sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h1 rv" data-ru="Как это работает" data-en="How it works">Как это работает</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item rv">
+        <div class="step-num">1</div>
+        <h3 data-ru="Консультация" data-en="Consultation">Консультация</h3>
+        <p data-ru="Оцениваем тату или татуаж, объясняем процесс, количество сеансов и стоимость. Без скрытых платежей." data-en="We assess your tattoo or makeup, explain the process, number of sessions and cost. No hidden fees.">Оцениваем тату или татуаж, объясняем процесс, количество сеансов и стоимость. Без скрытых платежей.</p>
+      </div>
+      <div class="step-item rv">
+        <div class="step-num">2</div>
+        <h3 data-ru="Подготовка" data-en="Preparation">Подготовка</h3>
+        <p data-ru="Наносим анестезирующий крем, защищаем глаза. Подготовка занимает 20–30 минут." data-en="We apply numbing cream and protect your eyes. Preparation takes 20–30 minutes.">Наносим анестезирующий крем, защищаем глаза. Подготовка занимает 20–30 минут.</p>
+      </div>
+      <div class="step-item rv">
+        <div class="step-num">3</div>
+        <h3 data-ru="Процедура" data-en="Procedure">Процедура</h3>
+        <p data-ru="Лазер разрушает пигмент импульсами света. Сеанс длится 15–60 минут в зависимости от размера." data-en="The laser breaks up pigment with light pulses. A session lasts 15–60 minutes depending on size.">Лазер разрушает пигмент импульсами света. Сеанс длится 15–60 минут в зависимости от размера.</p>
+      </div>
+      <div class="step-item rv">
+        <div class="step-num">4</div>
+        <h3 data-ru="Уход после" data-en="Aftercare">Уход после</h3>
+        <p data-ru="Даём подробные рекомендации по уходу. Следующий сеанс — через 6–8 недель для полного заживления." data-en="We provide detailed aftercare instructions. The next session is in 6–8 weeks for full healing.">Даём подробные рекомендации по уходу. Следующий сеанс — через 6–8 недель для полного заживления.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPMENT -->
+<section id="equipment" class="equip">
+  <div class="equip-pin" id="equipPin">
+    <div class="equip-arch" id="equipArch"></div>
+    <div class="equip-inner">
+      <div class="equip-text" id="equipText">
+        <span class="master-badge" data-ru="Профессиональное оборудование" data-en="Professional Equipment">Профессиональное оборудование</span>
+        <h2 class="h1" data-ru="Лазер последнего поколения" data-en="Latest generation laser">Лазер последнего поколения</h2>
+        <p class="lead" data-ru="Работаю на пикосекундном лазере Nd:YAG — это золотой стандарт удаления татуировок. Технология обеспечивает минимальный дискомфорт и максимальный результат уже после первых сеансов." data-en="I work with a picosecond Nd:YAG laser — the gold standard for tattoo removal. The technology ensures minimal discomfort and maximum results from the first sessions.">Работаю на пикосекундном лазере Nd:YAG — это золотой стандарт удаления татуировок. Технология обеспечивает минимальный дискомфорт и максимальный результат уже после первых сеансов.</p>
+        <a href="#booking"><button class="btn-out" data-ru="Узнать подробнее" data-en="Learn more">Узнать подробнее</button></a>
+      </div>
+      <div class="equip-visual">
+        <div class="equip-circle">
+          <img src="https://images.unsplash.com/photo-1598300195998-364bf445842c?w=800&fit=crop&crop=entropy&q=80&auto=format" alt="Лазерное оборудование">
+        </div>
+        <div class="equip-card" id="equipCard">
+          <div class="card-label" data-ru="Технические характеристики" data-en="Technical specifications">Технические характеристики</div>
+          <h3 data-ru="Nd:YAG Picosecond" data-en="Nd:YAG Picosecond">Nd:YAG Picosecond</h3>
+          <div class="equip-specs">
+            <div>
+              <div class="spec-val">1064</div>
+              <div class="spec-label">нм</div>
+            </div>
+            <div>
+              <div class="spec-val">532</div>
+              <div class="spec-label">нм</div>
+            </div>
+            <div>
+              <div class="spec-val">450</div>
+              <div class="spec-label">пс</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- GALLERY (BEFORE/AFTER) -->
+<section id="gallery" class="gallery sec">
+  <div class="wrap">
+    <div class="gallery sec-head">
+      <h2 class="h1 rv" data-ru="До и после" data-en="Before & After">До и после</h2>
+      <a href="#booking"><button class="btn-out rv" data-ru="Записаться" data-en="Book Now">Записаться</button></a>
+    </div>
+    <div class="gallery-note rv" data-ru="⚠️ Здесь будут реальные фотографии работ мастера Артёма. Для прототипа использованы стоковые фото." data-en="⚠️ This section will feature real before & after photos by Artem. Stock photos used for prototype.">⚠️ Здесь будут реальные фотографии работ мастера Артёма. Для прототипа использованы стоковые фото.</div>
+    <div class="slider-wrap">
+      <div class="gph rv">
+        <div class="gph-img">
+          <img src="https://images.unsplash.com/photo-1597852075234-fd721ac361d3?w=1200&fit=crop&q=80&auto=format" alt="До и после 1">
+          <div class="gph-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        </div>
+        <div class="gph-caption" data-ru="Удаление тату на руке · 4 сеанса" data-en="Arm tattoo removal · 4 sessions">Удаление тату на руке · 4 сеанса</div>
+      </div>
+      <div class="gph rv">
+        <div class="gph-img">
+          <img src="https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=1200&fit=crop&q=80&auto=format" alt="До и после 2">
+          <div class="gph-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        </div>
+        <div class="gph-caption" data-ru="Осветление татуажа бровей · 3 сеанса" data-en="Eyebrow tattoo lightening · 3 sessions">Осветление татуажа бровей · 3 сеанса</div>
+      </div>
+      <div class="gph rv">
+        <div class="gph-img">
+          <img src="https://images.unsplash.com/photo-1604374376934-2df6fad6519b?w=1200&fit=crop&q=80&auto=format" alt="До и после 3">
+          <div class="gph-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        </div>
+        <div class="gph-caption" data-ru="Полное удаление цветного тату · 6 сеансов" data-en="Full colour tattoo removal · 6 sessions">Полное удаление цветного тату · 6 сеансов</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section id="advantages" class="sec" style="background:var(--bg-alt)">
+  <div class="wrap">
+    <h2 class="h1 rv" style="margin-bottom:40px" data-ru="Почему выбирают меня" data-en="Why choose me">Почему выбирают меня</h2>
+    <div class="adv-grid">
+      <div class="adv rv">
+        <div class="adv-bg"><img src="https://images.unsplash.com/photo-1655655314398-c40c8dc6fb75?w=800&fit=crop&q=80&auto=format" alt=""></div>
+        <div class="adv-overlay"></div>
+        <div class="adv-body">
+          <h3 data-ru="Без шрамов" data-en="No scars">Без шрамов</h3>
+          <ul>
+            <li data-ru="Пикосекундный лазер не повреждает кожу" data-en="Picosecond laser does not damage skin">Пикосекундный лазер не повреждает кожу</li>
+            <li data-ru="Индивидуальный подбор параметров" data-en="Individual parameter selection">Индивидуальный подбор параметров</li>
+          </ul>
+          <div class="adv-more">
+            <p style="font-size:14px;opacity:.8;margin-top:10px" data-ru="Правильная настройка лазера — ключ к результату без следов. Я никогда не тороплюсь и не превышаю допустимую интенсивность." data-en="Correct laser calibration is the key to scar-free results. I never rush and never exceed safe intensity.">Правильная настройка лазера — ключ к результату без следов. Я никогда не тороплюсь и не превышаю допустимую интенсивность.</p>
+          </div>
+          <button class="adv-plus"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </div>
+      </div>
+      <div class="adv rv">
+        <div class="adv-bg"><img src="https://images.unsplash.com/photo-1598300195998-364bf445842c?w=800&fit=crop&q=80&auto=format" alt=""></div>
+        <div class="adv-overlay"></div>
+        <div class="adv-body">
+          <h3 data-ru="Профессиональный лазер" data-en="Professional laser">Профессиональный лазер</h3>
+          <ul>
+            <li data-ru="Nd:YAG пикосекундная технология" data-en="Nd:YAG picosecond technology">Nd:YAG пикосекундная технология</li>
+            <li data-ru="Удаляет все цвета пигмента" data-en="Removes all pigment colours">Удаляет все цвета пигмента</li>
+          </ul>
+          <div class="adv-more">
+            <p style="font-size:14px;opacity:.8;margin-top:10px" data-ru="Пикосекундный лазер работает в тысячи раз быстрее обычного — пигмент дробится на мельчайшие частицы, которые организм выводит естественным путём." data-en="Picosecond laser works thousands of times faster than conventional — pigment breaks into tiny particles naturally eliminated by the body.">Пикосекундный лазер работает в тысячи раз быстрее обычного — пигмент дробится на мельчайшие частицы, которые организм выводит естественным путём.</p>
+          </div>
+          <button class="adv-plus"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </div>
+      </div>
+      <div class="adv rv">
+        <div class="adv-bg"><img src="https://images.unsplash.com/photo-1713085085470-fba013d67e65?w=800&fit=crop&q=80&auto=format" alt=""></div>
+        <div class="adv-overlay"></div>
+        <div class="adv-body">
+          <h3 data-ru="Индивидуальный подход" data-en="Individual approach">Индивидуальный подход</h3>
+          <ul>
+            <li data-ru="Каждый случай уникален" data-en="Every case is unique">Каждый случай уникален</li>
+            <li data-ru="Честный прогноз и план" data-en="Honest forecast and plan">Честный прогноз и план</li>
+          </ul>
+          <div class="adv-more">
+            <p style="font-size:14px;opacity:.8;margin-top:10px" data-ru="Перед процедурой всегда провожу детальную консультацию: оцениваю тип кожи, состав чернил, глубину залегания пигмента." data-en="Before the procedure I always conduct a detailed consultation: assessing skin type, ink composition, pigment depth.">Перед процедурой всегда провожу детальную консультацию: оцениваю тип кожи, состав чернил, глубину залегания пигмента.</p>
+          </div>
+          <button class="adv-plus"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </div>
+      </div>
+      <div class="adv rv">
+        <div class="adv-bg"><img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=800&fit=crop&q=80&auto=format" alt=""></div>
+        <div class="adv-overlay"></div>
+        <div class="adv-body">
+          <h3 data-ru="Результат с первого сеанса" data-en="Results from session one">Результат с первого сеанса</h3>
+          <ul>
+            <li data-ru="Осветление видно сразу" data-en="Lightening visible immediately">Осветление видно сразу</li>
+            <li data-ru="Прогрессивный результат" data-en="Progressive results">Прогрессивный результат</li>
+          </ul>
+          <div class="adv-more">
+            <p style="font-size:14px;opacity:.8;margin-top:10px" data-ru="Уже после первого сеанса тату заметно светлеет. С каждым последующим — эффект усиливается." data-en="After just the first session the tattoo lightens noticeably. With each subsequent session the effect intensifies.">Уже после первого сеанса тату заметно светлеет. С каждым последующим — эффект усиливается.</p>
+          </div>
+          <button class="adv-plus"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews sec">
+  <div class="wrap">
+    <div class="reviews sec-head">
+      <h2 class="h1 rv" data-ru="Отзывы" data-en="Reviews">Отзывы <span class="badge">6</span></h2>
+      <a href="#booking"><button class="btn-out rv" data-ru="Записаться" data-en="Book Now">Записаться</button></a>
+    </div>
+    <div class="slider-wrap">
+      <div class="rev rv">
+        <div class="rev-head">
+          <div class="rev-avatar">А</div>
+          <div><div class="rev-name">Анна К.</div><div class="rev-date">Октябрь 2026</div></div>
+        </div>
+        <div class="rev-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="rev-text" data-ru="Удаляла татуаж бровей после неудачного мастера. Артём всё объяснил, процедура прошла комфортно. После 3 сеансов брови чистые! Очень благодарна." data-en="I came to remove failed eyebrow microblading. Artem explained everything, the procedure was comfortable. After 3 sessions my brows are clean! Very grateful.">Удаляла татуаж бровей после неудачного мастера. Артём всё объяснил, процедура прошла комфортно. После 3 сеансов брови чистые! Очень благодарна.</p>
+        <div class="rev-meta" data-ru="Услуга: Удаление татуажа бровей · 3 сеанса" data-en="Service: Eyebrow microblading removal · 3 sessions">Услуга: Удаление татуажа бровей · 3 сеанса</div>
+      </div>
+      <div class="rev rv">
+        <div class="rev-head">
+          <div class="rev-avatar">М</div>
+          <div><div class="rev-name">Михаил Р.</div><div class="rev-date">Сентябрь 2026</div></div>
+        </div>
+        <div class="rev-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="rev-text" data-ru="Делал 5 сеансов по удалению тату на предплечье. Результат впечатляет — практически чистая кожа. Профессионал своего дела." data-en="Had 5 sessions to remove a forearm tattoo. The result is impressive — virtually clean skin. A true professional.">Делал 5 сеансов по удалению тату на предплечье. Результат впечатляет — практически чистая кожа. Профессионал своего дела.</p>
+        <div class="rev-meta" data-ru="Услуга: Удаление тату · 5 сеансов" data-en="Service: Tattoo removal · 5 sessions">Услуга: Удаление тату · 5 сеансов</div>
+      </div>
+      <div class="rev rv">
+        <div class="rev-head">
+          <div class="rev-avatar">Е</div>
+          <div><div class="rev-name">Елена С.</div><div class="rev-date">Август 2026</div></div>
+        </div>
+        <div class="rev-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="rev-text" data-ru="Перед свадьбой нужно было убрать тату на шее. Артём сделал невозможное — за 4 сеанса кожа стала чистой. Спасибо огромное!" data-en="I needed to remove a neck tattoo before my wedding. Artem did the impossible — in 4 sessions my skin was clear. Thank you so much!">Перед свадьбой нужно было убрать тату на шее. Артём сделал невозможное — за 4 сеанса кожа стала чистой. Спасибо огромное!</p>
+        <div class="rev-meta" data-ru="Услуга: Удаление тату · 4 сеанса" data-en="Service: Tattoo removal · 4 sessions">Услуга: Удаление тату · 4 сеанса</div>
+      </div>
+      <div class="rev rv">
+        <div class="rev-head">
+          <div class="rev-avatar">D</div>
+          <div><div class="rev-name">David M.</div><div class="rev-date">July 2026</div></div>
+        </div>
+        <div class="rev-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="rev-text">Great experience! Artem is very professional, explained everything clearly. My sleeve tattoo is fading beautifully after 6 sessions. Highly recommend!</p>
+        <div class="rev-meta">Service: Sleeve tattoo removal · 6 sessions</div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-top:16px;text-align:center" data-ru="* Демо-отзывы. Замените на реальные отзывы ваших клиентов." data-en="* Demo reviews. Replace with real client reviews.">* Демо-отзывы. Замените на реальные отзывы ваших клиентов.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing sec" style="background:var(--bg-alt)">
+  <div class="wrap">
+    <div class="pricing sec-head">
+      <h2 class="h1 rv" data-ru="Цены" data-en="Pricing">Цены</h2>
+      <a href="#booking"><button class="btn-out rv" data-ru="Записаться" data-en="Book Now">Записаться</button></a>
+    </div>
+    <div class="price-grid">
+      <div class="price-card rv">
+        <div class="price-label" data-ru="Небольшие тату" data-en="Small tattoos">Небольшие тату</div>
+        <h3 data-ru="Стандарт" data-en="Standard">Стандарт</h3>
+        <div class="price-val">от 50 €</div>
+        <ul>
+          <li data-ru="Тату до 5 см" data-en="Tattoo up to 5 cm">Тату до 5 см</li>
+          <li data-ru="1 цвет пигмента" data-en="1 pigment colour">1 цвет пигмента</li>
+          <li data-ru="Консультация включена" data-en="Consultation included">Консультация включена</li>
+          <li data-ru="Рекомендации по уходу" data-en="Aftercare advice">Рекомендации по уходу</li>
+        </ul>
+        <a href="#booking"><button class="btn-blue" style="width:100%" data-ru="Записаться" data-en="Book Now">Записаться</button></a>
+      </div>
+      <div class="price-card featured rv">
+        <div class="price-label" data-ru="Популярный выбор" data-en="Most popular">Популярный выбор</div>
+        <h3 data-ru="Оптимальный" data-en="Optimal">Оптимальный</h3>
+        <div class="price-val">от 80 €</div>
+        <ul>
+          <li data-ru="Тату 5–15 см" data-en="Tattoo 5–15 cm">Тату 5–15 см</li>
+          <li data-ru="Многоцветный пигмент" data-en="Multicolour pigment">Многоцветный пигмент</li>
+          <li data-ru="Консультация включена" data-en="Consultation included">Консультация включена</li>
+          <li data-ru="Скидка 10% с 3-го сеанса" data-en="10% off from 3rd session">Скидка 10% с 3-го сеанса</li>
+        </ul>
+        <a href="#booking"><button class="btn-accent" style="width:100%" data-ru="Записаться" data-en="Book Now">Записаться</button></a>
+      </div>
+      <div class="price-card rv">
+        <div class="price-label" data-ru="Крупные работы" data-en="Large works">Крупные работы</div>
+        <h3 data-ru="Премиум" data-en="Premium">Премиум</h3>
+        <div class="price-val" data-ru="от 150 €" data-en="from €150">от 150 €</div>
+        <ul>
+          <li data-ru="Тату от 15 см, sleeve" data-en="Tattoo 15+ cm, sleeve">Тату от 15 см, sleeve</li>
+          <li data-ru="Любой пигмент" data-en="Any pigment">Любой пигмент</li>
+          <li data-ru="Приоритетная запись" data-en="Priority booking">Приоритетная запись</li>
+          <li data-ru="Скидка 15% с 3-го сеанса" data-en="15% off from 3rd session">Скидка 15% с 3-го сеанса</li>
+        </ul>
+        <a href="#booking"><button class="btn-blue" style="width:100%" data-ru="Записаться" data-en="Book Now">Записаться</button></a>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-top:20px;text-align:center" data-ru="* Точная стоимость определяется на консультации. Замените на реальный прайс." data-en="* Exact cost determined at consultation. Replace with your real pricing.">* Точная стоимость определяется на консультации. Замените на реальный прайс.</p>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="booking">
+  <div class="booking-inner">
+    <div class="wrap">
+      <h2 class="h1 rv" data-ru="Записаться на консультацию" data-en="Book a Consultation">Записаться на консультацию</h2>
+      <p class="lead rv" data-ru="Первая консультация бесплатно. Оценим ваш случай и составим план." data-en="First consultation is free. We'll assess your case and create a plan.">Первая консультация бесплатно. Оценим ваш случай и составим план.</p>
+      <div class="book-form rv">
+        <div class="field">
+          <label data-ru="Ваше имя" data-en="Your name">Ваше имя</label>
+          <input type="text" id="bkName" placeholder="Имя Фамилия">
+        </div>
+        <div class="field">
+          <label data-ru="Телефон" data-en="Phone">Телефон</label>
+          <input type="tel" id="bkPhone" placeholder="+372 000 0000">
+        </div>
+        <div class="field">
+          <label data-ru="Услуга" data-en="Service">Услуга</label>
+          <input type="text" id="bkService" placeholder="Удаление тату" data-ru-placeholder="Удаление тату" data-en-placeholder="Tattoo removal">
+        </div>
+        <div class="book-form-actions">
+          <button class="btn-accent" onclick="submitBooking()" data-ru="Записаться" data-en="Book Now">Записаться</button>
+          <div class="book-form-check">
+            <input type="checkbox" id="bkChk" checked>
+            <label for="bkChk" data-ru="Согласен с политикой конфиденциальности" data-en="I agree to the privacy policy">Согласен с политикой конфиденциальности</label>
+          </div>
+        </div>
+      </div>
+      <div class="thankyou" id="bookThankyou">
+        <h3 style="font-size:24px;margin-bottom:10px" data-ru="Спасибо! Мы свяжемся с вами в ближайшее время." data-en="Thank you! We'll contact you shortly.">Спасибо! Мы свяжемся с вами в ближайшее время.</h3>
+        <p style="color:var(--muted)" data-ru="Обычно отвечаем в течение 2 часов в рабочее время." data-en="We usually respond within 2 hours during business hours.">Обычно отвечаем в течение 2 часов в рабочее время.</p>
+      </div>
+      <div class="bk-cards rv">
+        <div class="bk-card bk-contact">
+          <h3 data-ru="Контакты" data-en="Contact">Контакты</h3>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Tartu mnt. 136, Tallinn
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+              <a href="tel:+37200000000" style="color:inherit">+372 000 0000 (замените)</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:info@artemkoval.com" style="color:inherit">info@artemkoval.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span data-ru="Пн–Сб: 10:00–20:00" data-en="Mon–Sat: 10:00–20:00">Пн–Сб: 10:00–20:00</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bk-card bk-map">
+          <div class="bk-map-svg">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </div>
+          <button class="btn-blue" style="margin:0" onclick="window.open('https://maps.google.com/?q=Tartu+mnt+136+Tallinn')" data-ru="Открыть карту" data-en="Open map">Открыть карту</button>
+        </div>
+        <div class="bk-card bk-photo">
+          <img src="https://images.unsplash.com/photo-1655655314398-c40c8dc6fb75?w=600&fit=crop&q=80&auto=format" alt="Кабинет">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-top">
+    <div class="wrap">
+      <div class="ft-top-inner">
+        <div></div>
+        <div class="ft-logo">
+          <div style="width:50px;height:50px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:8px">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="logo-text" data-ru="Артём Коваль" data-en="Artem Koval">Артём Коваль</div>
+          <span class="logo-sub" data-ru="Лазерное удаление · Таллин" data-en="Laser Removal · Tallinn">Лазерное удаление · Таллин</span>
+        </div>
+        <div class="ft-soc">
+          <a href="#" class="ft-soc-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="white" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://t.me/artem_koval_laser" class="ft-soc-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="white" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+          <a href="#" class="ft-soc-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="white" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div style="text-align:center;margin-bottom:24px">
+        <a href="#services"><button class="btn-accent ft-services-btn" data-ru="Услуги · 4" data-en="Services · 4">Услуги · 4</button></a>
+      </div>
+      <div class="ft-nav-links">
+        <a href="#master"><button class="btn-dark" data-ru="О мастере" data-en="About">О мастере</button></a>
+        <a href="#services"><button class="btn-dark" data-ru="Услуги" data-en="Services">Услуги</button></a>
+        <a href="#equipment"><button class="btn-dark" data-ru="Оборудование" data-en="Equipment">Оборудование</button></a>
+        <a href="#gallery"><button class="btn-dark" data-ru="До и после" data-en="Before & After">До и после</button></a>
+        <a href="#reviews"><button class="btn-dark" data-ru="Отзывы" data-en="Reviews">Отзывы</button></a>
+        <a href="#pricing"><button class="btn-dark" data-ru="Цены" data-en="Pricing">Цены</button></a>
+        <a href="#booking"><button class="btn-dark" data-ru="Записаться" data-en="Book Now">Записаться</button></a>
+      </div>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <div class="wrap">
+      <div class="ft-bot-grid">
+        <div class="ft-col">
+          <h4 data-ru="Мастер" data-en="Master">Мастер</h4>
+          <ul>
+            <li><a href="#master" data-ru="Об Артёме" data-en="About Artem">Об Артёме</a></li>
+            <li><a href="#equipment" data-ru="Оборудование" data-en="Equipment">Оборудование</a></li>
+            <li><a href="#gallery" data-ru="Работы" data-en="Portfolio">Работы</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h4 data-ru="Клиентам" data-en="Clients">Клиентам</h4>
+          <ul>
+            <li><a href="#how" data-ru="Как это работает" data-en="How it works">Как это работает</a></li>
+            <li><a href="#pricing" data-ru="Цены" data-en="Pricing">Цены</a></li>
+            <li><a href="#reviews" data-ru="Отзывы" data-en="Reviews">Отзывы</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h4 data-ru="Контакты" data-en="Contact">Контакты</h4>
+          <ul>
+            <li><a href="tel:+37200000000">+372 000 0000</a></li>
+            <li><a href="mailto:info@artemkoval.com">info@artemkoval.com</a></li>
+            <li><a href="https://t.me/artem_koval_laser">Telegram</a></li>
+            <li><a href="#">Tartu mnt. 136, Tallinn</a></li>
+          </ul>
+        </div>
+        <div class="ft-col ft-subscribe">
+          <label data-ru="Подписаться на новости" data-en="Subscribe for updates">Подписаться на новости</label>
+          <div class="ft-subscribe-row">
+            <input type="email" placeholder="email@example.com">
+            <button class="btn-accent" data-ru="OK" data-en="OK">OK</button>
+          </div>
+        </div>
+      </div>
+      <div class="ft-legal">
+        <span>© <span id="yr"></span> Артём Коваль. <span data-ru="Все права защищены." data-en="All rights reserved.">Все права защищены.</span></span>
+        <span data-ru="Фото: Unsplash" data-en="Photos: Unsplash">Фото: Unsplash</span>
+        <span><a href="#" style="color:inherit" data-ru="Политика конфиденциальности" data-en="Privacy Policy">Политика конфиденциальности</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOAT CHAT -->
+<div class="float-chat">
+  <div class="chat-panel" id="chatPanel">
+    <h4 data-ru="Написать мне" data-en="Contact me">Написать мне</h4>
+    <a href="https://t.me/artem_koval_laser" class="chat-link">
+      Telegram <div class="ico-round"><svg viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></div>
+    </a>
+    <a href="tel:+37200000000" class="chat-link">
+      <span data-ru="Позвонить" data-en="Call us">Позвонить</span> <div class="ico-round"><svg viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></div>
+    </a>
+    <a href="mailto:info@artemkoval.com" class="chat-link">
+      Email <div class="ico-round"><svg viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></div>
+    </a>
+  </div>
+  <button class="chat-btn" id="chatToggle" aria-label="Контакты">
+    <svg viewBox="0 0 24 24"><path fill="var(--navy)" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+  </button>
+</div>
+
+
+  <script src="script.js" defer></script>
+</body>
+</html>
