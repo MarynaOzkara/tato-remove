@@ -13,6 +13,11 @@ function switchLang(lang) {
     el.placeholder = el.getAttribute('data-'+lang+'-placeholder');
   });
   document.documentElement.lang = lang;
+  if(burgerBtn) {
+    burgerBtn.setAttribute('aria-label', burgerBtn.getAttribute('aria-expanded') === 'true'
+      ? (lang === 'ru' ? 'Закрыть меню' : 'Close menu')
+      : (lang === 'ru' ? 'Открыть меню' : 'Open menu'));
+  }
 }
 
 // HERO SLIDER
@@ -43,9 +48,10 @@ const mobileMenu = document.getElementById('mobileMenu');
 
 function setMobileMenuOpen(isOpen) {
   burgerBtn.setAttribute('aria-expanded', String(isOpen));
-  burgerBtn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+  burgerBtn.setAttribute('aria-label', isOpen
+    ? (currentLang === 'ru' ? 'Закрыть меню' : 'Close menu')
+    : (currentLang === 'ru' ? 'Открыть меню' : 'Open menu'));
   mobileMenu.classList.toggle('open', isOpen);
-  mobileMenu.setAttribute('aria-hidden', String(!isOpen));
 }
 
 burgerBtn.addEventListener('click', () => {
