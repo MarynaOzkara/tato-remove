@@ -39,15 +39,40 @@ hs.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - 
 
 // BURGER
 const burgerBtn = document.getElementById('burgerBtn');
-const mnavPanel = document.getElementById('mnavPanel');
-const mnavOverlay = document.getElementById('mnavOverlay');
-const mnavClose = document.getElementById('mnavClose');
-function openNav() { mnavPanel.classList.add('open'); mnavOverlay.classList.add('open'); }
-function closeNav() { mnavPanel.classList.remove('open'); mnavOverlay.classList.remove('open'); }
-burgerBtn.onclick = openNav;
-mnavClose.onclick = closeNav;
-mnavOverlay.onclick = closeNav;
-document.querySelectorAll('.mnav-link').forEach(l => l.addEventListener('click', closeNav));
+const mobileMenu = document.getElementById('mobileMenu');
+
+function setMobileMenuOpen(isOpen) {
+  burgerBtn.setAttribute('aria-expanded', String(isOpen));
+  burgerBtn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+  mobileMenu.classList.toggle('open', isOpen);
+  mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+}
+
+burgerBtn.addEventListener('click', () => {
+  setMobileMenuOpen(burgerBtn.getAttribute('aria-expanded') !== 'true');
+});
+
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => setMobileMenuOpen(false));
+});
+
+document.addEventListener('click', e => {
+  if(mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !burgerBtn.contains(e.target)) {
+    setMobileMenuOpen(false);
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+    setMobileMenuOpen(false);
+    burgerBtn.focus();
+  }
+});
+
+window.addEventListener('resize', () => {
+  if(window.innerWidth > 768) setMobileMenuOpen(false);
+});
+
 
 // HEADER HIDE/SHOW
 let lastScroll = 0;

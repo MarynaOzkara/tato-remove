@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Артём Коваль — Лазерное удаление тату и татуажа в Таллине</title>
+<title>Лазерное удаление тату и татуажа в Таллине</title>
 <meta name="description" content="Профессиональное лазерное удаление тату, татуажа и перманентного макияжа. Мастер Артём Коваль, Таллин. Без шрамов, с гарантией результата.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>✨</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
 <!-- HEADER -->
 <header id="hdr">
   <div class="hdr-top">
-    <div class="wrap" style="display:flex;align-items:center;gap:24px;width:100%;max-width:1422px;padding:0 15px">
+    <div class="wrap" style="display:flex;align-items:center;gap:16px;width:100%;max-width:1422px;padding:0 15px">
       <span class="hdr-slogan">Лазерное удаление тату · Таллин</span>
       <div class="spacer"></div>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--icon)" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
@@ -31,54 +31,41 @@
     </div>
   </div>
   <div class="hdr-main">
-    <button class="burger" id="burgerBtn" aria-label="Меню">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
     <a href="#" class="logo">
       <div class="logo-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
       </div>
       <div>
-        <div class="logo-text" data-ru="Артём Коваль" data-en="Artem Koval">Артём Коваль</div>
+        <div class="logo-text" data-ru="Марилис Томла" data-en="Marilis Toomla">Марилис Томла</div>
         <span class="logo-sub" data-ru="Лазерное удаление" data-en="Laser Removal">Лазерное удаление</span>
       </div>
     </a>
-    <nav>
-      <a href="#master" class="nav-link" data-ru="О мастере" data-en="About">О мастере</a>
-      <a href="#services" class="nav-link" data-ru="Услуги" data-en="Services">Услуги</a>
-      <a href="#how" class="nav-link" data-ru="Как это работает" data-en="How it works">Как это работает</a>
-      <a href="#equipment" class="nav-link" data-ru="Оборудование" data-en="Equipment">Оборудование</a>
-      <a href="#reviews" class="nav-link" data-ru="Отзывы" data-en="Reviews">Отзывы</a>
-      <a href="#pricing" class="nav-link" data-ru="Цены" data-en="Pricing">Цены</a>
-    </nav>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav aria-label="Основная навигация">
+        <a href="#master" class="nav-link" data-ru="О мастере" data-en="About">О мастере</a>
+        <a href="#services" class="nav-link" data-ru="Услуги" data-en="Services">Услуги</a>
+        <a href="#how" class="nav-link" data-ru="Как это работает" data-en="How it works">Как это работает</a>
+        <a href="#equipment" class="nav-link" data-ru="Оборудование" data-en="Equipment">Оборудование</a>
+        <a href="#reviews" class="nav-link" data-ru="Отзывы" data-en="Reviews">Отзывы</a>
+        <a href="#pricing" class="nav-link" data-ru="Цены" data-en="Pricing">Цены</a>
+      </nav>
+      <div class="lang-switcher mobile-lang-switcher" aria-label="Выбор языка">
+        <button class="lang-btn active" onclick="switchLang('ru')">RU</button>
+        <button class="lang-btn" onclick="switchLang('en')">EN</button>
+      </div>
+      <a href="#booking" class="mobile-book-link" data-ru="Записаться" data-en="Book Now">Записаться</a>
+    </div>
     <div class="hdr-btns">
       <a href="#booking"><button class="btn-blue" data-ru="Записаться" data-en="Book Now">Записаться</button></a>
     </div>
     <a href="tel:+37200000000" class="phone-ico">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
     </a>
+    <button class="burger" id="burgerBtn" type="button" aria-label="Открыть меню" aria-controls="mobileMenu" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" aria-hidden="true"><line class="burger-line" x1="3" y1="6" x2="21" y2="6"/><line class="burger-line" x1="3" y1="12" x2="21" y2="12"/><line class="burger-line" x1="3" y1="18" x2="21" y2="18"/><line class="burger-close-line" x1="5" y1="5" x2="19" y2="19"/><line class="burger-close-line" x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
   </div>
 </header>
-
-<!-- MOBILE NAV -->
-<div class="mnav-overlay" id="mnavOverlay"></div>
-<nav class="mnav" id="mnavPanel">
-  <button class="mnav-close" id="mnavClose">✕</button>
-  <ul>
-    <li><a href="#master" class="mnav-link" data-ru="О мастере" data-en="About">О мастере</a></li>
-    <li><a href="#services" class="mnav-link" data-ru="Услуги" data-en="Services">Услуги</a></li>
-    <li><a href="#how" class="mnav-link" data-ru="Как это работает" data-en="How it works">Как это работает</a></li>
-    <li><a href="#equipment" class="mnav-link" data-ru="Оборудование" data-en="Equipment">Оборудование</a></li>
-    <li><a href="#reviews" class="mnav-link" data-ru="Отзывы" data-en="Reviews">Отзывы</a></li>
-    <li><a href="#pricing" class="mnav-link" data-ru="Цены" data-en="Pricing">Цены</a></li>
-    <li><a href="#booking" class="mnav-link" data-ru="Записаться" data-en="Book Now">Записаться</a></li>
-  </ul>
-  <div class="lang-switcher" style="margin-top:30px">
-    <button class="lang-btn active" onclick="switchLang('ru')">RU</button>
-    <button class="lang-btn" onclick="switchLang('en')">EN</button>
-  </div>
-</nav>
-
 <!-- HERO -->
 <section id="hero">
   <div class="hero-slider" id="heroSlider">
@@ -151,8 +138,8 @@
   <div class="wrap">
     <div class="about sec-head">
       <div class="sec-head-left">
-        <h2 class="h1 rv" data-ru="Мастер Артём Коваль" data-en="Master Artem Koval">Мастер Артём Коваль</h2>
-        <p class="lead rv" data-ru="Специалист по лазерному удалению тату и татуажа. Работаю с профессиональным оборудованием последнего поколения. Индивидуальный подход к каждому клиенту." data-en="Specialist in laser tattoo and permanent makeup removal. I work with the latest professional equipment and take an individual approach to each client.">Специалист по лазерному удалению тату и татуажа. Работаю с профессиональным оборудованием последнего поколения. Индивидуальный подход к каждому клиенту.</p>
+        <h2 class="h1 rv" data-ru="Мастер Артём Коваль" data-en="Master Artem Koval">Ваш мастер</h2>
+        <p class="lead rv" data-ru="Специалист по лазерному удалению тату и татуажа. Работаю с профессиональным оборудованием последнего поколения. Индивидуальный подход к каждому клиенту." data-en="Specialist in laser tattoo and permanent makeup removal. I work with the latest professional equipment and take an individual approach to each client.">Я - специалист по лазерному удалению тату и татуажа. Работаю с профессиональным оборудованием последнего поколения. Индивидуальный подход к каждому клиенту.</p>
       </div>
       <div>
         <p style="font-size:14px;color:var(--muted);margin-bottom:10px" data-ru="Я в соцсетях" data-en="Follow me">Я в соцсетях</p>
