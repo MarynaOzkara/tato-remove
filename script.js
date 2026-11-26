@@ -118,25 +118,52 @@ const equipText = document.getElementById('equipText');
 let ticking = false;
 
 function updateEquip() {
-  if(window.innerWidth <= 768) return;
   const rect = equipSection.getBoundingClientRect();
+  if(window.innerWidth <= 768) {
+    // The mobile/tablet pin holds the viewport while both entrance stages run.
+    const total = equipSection.offsetHeight - window.innerHeight;
+    const progress = total > 0 ? Math.max(0, Math.min(1, -rect.top / total)) : 1;
+    const cardPhase = 0.38;
+    const cardProgress = Math.min(1, progress / cardPhase);
+    const archProgress = Math.max(0, Math.min(1, (progress - cardPhase) / (1 - cardPhase)));
+    const circle = document.querySelector('.equip-circle');
+    if(equipArch && circle) {
+      const parentRect = equipArch.parentElement.getBoundingClientRect();
+      const circleRect = circle.getBoundingClientRect();
+      const circleCenter = circleRect.left - parentRect.left + circleRect.width / 2;
+      const endX = circleCenter - equipArch.offsetLeft;
+      equipArch.style.transform = `translateX(calc(-100% + ${endX * archProgress}px))`;
+    }
+    if(equipCard) {
+      if(window.innerWidth >= 577) {
+        equipCard.style.transform = `translateY(calc(${100 - cardProgress * 100}% - 50%))`;
+      } else {
+        equipCard.style.transform = `translateY(${100 - cardProgress * 100}%)`;
+      }
+      equipCard.style.opacity = String(cardProgress);
+    }
+    ticking = false;
+    return;
+  }
   const total = equipSection.offsetHeight - window.innerHeight;
   if(total <= 0) return;
 
-  // progress 0→1 across the full sticky scroll distance
+  // Card reaches its resting position first; the arch starts only afterward.
   const progress = Math.max(0, Math.min(1, -rect.top / total));
-
-  // Arch: width = 75vw.
-  // At progress=0 → right edge of arch is at 0px (fully off-screen left): translateX = -100%
-  // At progress=1 → right edge of arch reaches ~75% of viewport = center of circle: translateX = 0%
-  // But we want to END movement at 0%, meaning fully in position.
-  // To make arch arrive at center-of-circle we keep translateX: -100% → 0%
-  if(equipArch) equipArch.style.transform = `translateX(${-100 + progress * 100}%)`;
-
-  // Card floats up slightly as arch arrives
+  const cardPhase = 0.38;
+  const cardProgress = Math.min(1, progress / cardPhase);
+  const archProgress = Math.max(0, Math.min(1, (progress - cardPhase) / (1 - cardPhase)));
+  const circle = document.querySelector('.equip-circle');
+  if(equipArch && circle) {
+    const parentRect = equipArch.parentElement.getBoundingClientRect();
+    const circleRect = circle.getBoundingClientRect();
+    const circleCenter = circleRect.left - parentRect.left + circleRect.width / 2;
+    const endX = circleCenter - equipArch.offsetLeft;
+    equipArch.style.transform = `translateX(calc(-100% + ${endX * archProgress}px))`;
+  }
   if(equipCard) {
-    equipCard.style.transform = `translateY(${60 - progress * 60}px)`;
-    equipCard.style.opacity = String(Math.min(1, progress * 2));
+    equipCard.style.transform = `translateY(${100 - cardProgress * 100}%)`;
+    equipCard.style.opacity = String(cardProgress);
   }
 
   if(equipText) equipText.style.transform = `translateY(${(1 - progress) * 20}px)`;
